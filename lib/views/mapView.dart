@@ -312,14 +312,16 @@ class _MapviewState extends State<Mapview> {
                     padding: EdgeInsets.all(MySize.size12),
                     decoration: BoxDecoration(
                         color: Colors.white.withOpacity(.4),
-                        borderRadius:BorderRadius.circular(30)
-
+                        borderRadius:BorderRadius.circular(30),
                     ),
-                    child: const Row(
+                    child: Row(
                       // mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Icon(Iconsax.align_left, color: Colors.white,),
-                        Text("  List of variants",style: TextStyle(color: Colors.white),)
+                        // Icon(Iconsax.menu_1, color: Colors.white,),
+                        Image.asset("assets/images/list.png",
+                          height: MySize.size15,
+                        ),
+                        const Text("  List of variants",style: TextStyle(color: Colors.white),)
                       ],
                     ),
                   ),
