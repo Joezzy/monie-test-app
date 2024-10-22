@@ -9,8 +9,6 @@ import 'package:responsive_grid/responsive_grid.dart';
 import 'package:testapp/core/appColor.dart';
 import 'package:testapp/core/sizeUtil.dart';
 import 'package:testapp/custom/animatedCounter.dart';
-import 'package:testapp/custom/iconWidget.dart';
-import 'package:testapp/main.dart';
 import 'package:testapp/views/test.dart';
 
 class DashboardView extends StatefulWidget {
@@ -59,7 +57,7 @@ class _DashboardViewState extends State<DashboardView> {
                   children: [
 
                     FadeIn(
-                      duration: const Duration(milliseconds: 1000),
+                      duration: const Duration(milliseconds: 2000),
                       child: Container(
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
@@ -77,7 +75,7 @@ class _DashboardViewState extends State<DashboardView> {
                     ),
 
                     ZoomIn(
-                      duration: const Duration(milliseconds: 2000),
+                      duration: const Duration(milliseconds: 3000),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(100),
                         child: Image.asset("assets/images/avatar1.jpg",
@@ -156,26 +154,24 @@ class _DashboardViewState extends State<DashboardView> {
                       delay: const Duration(milliseconds: 1500),
 
                       child: Container(
-                        margin: const EdgeInsets.only(right: 10),
+                        margin:  EdgeInsets.only(right: MySize.size10),
                         padding: EdgeInsets.symmetric(
                             vertical: MySize.size30,
-                            horizontal: MySize.size40
+                            // horizontal: MySize.size40
                         ),
                         decoration: BoxDecoration(
                             color: AppColor.highlight,
-                            borderRadius: BorderRadius.circular(100)
+                            borderRadius: BorderRadius.circular(120)
                         ),
                         child: Column(
                           children: [
-                            Padding(
-                              padding:  EdgeInsets.only(bottom: MySize.size20),
-                              child: const Text("BUY",
-                                style: TextStyle(color: Colors.white),),
-                            ),
+                            const Text("BUY",
+                              style: TextStyle(color: Colors.white),),
+                            SizedBox(height: MySize.size18,),
                             AnimatedCounter(
                               end: 1034,
                               duration: const Duration(seconds: 3),
-                              textStyle: TextStyle(fontSize: MySize.size34,color: Colors.white, fontWeight: FontWeight.bold),
+                              textStyle: TextStyle(fontSize: MySize.size32,color: Colors.white, fontWeight: FontWeight.bold),
                             ),
 
                             const Text("Offers",
@@ -198,7 +194,7 @@ class _DashboardViewState extends State<DashboardView> {
                         margin: const EdgeInsets.only(left: 10),
                         padding: EdgeInsets.symmetric(
                             vertical: MySize.size30,
-                            horizontal: MySize.size40
+                            // horizontal: MySize.size40
                         ),
                         decoration: BoxDecoration(
                             color: AppColor.white,
@@ -206,18 +202,14 @@ class _DashboardViewState extends State<DashboardView> {
                         ),
                         child: Column(
                           children: [
-                            Padding(
-                              padding:  EdgeInsets.only(bottom: MySize.size20),
-                              child: Text("RENT",
-                                style: TextStyle(color: AppColor.secFont),),
-                            ),
-
+                            Text("RENT",
+                              style: TextStyle(color: AppColor.secFont),),
+                            SizedBox(height: MySize.size18,),
                             AnimatedCounter(
                               end: 2120,
                               duration: const Duration(seconds: 3),
-                              textStyle: TextStyle(fontSize: MySize.size34,color: AppColor.secFont, fontWeight: FontWeight.bold),
+                              textStyle: TextStyle(fontSize: MySize.size32,color: AppColor.secFont, fontWeight: FontWeight.bold),
                             ),
-
                             Text("Offers",
                               style: TextStyle(color: AppColor.secFont),),
 
@@ -229,9 +221,9 @@ class _DashboardViewState extends State<DashboardView> {
               ),
 
            SlideInUp(
-             duration: const Duration(milliseconds: 600),
+             duration: const Duration(milliseconds: 1000),
              delay: const Duration(milliseconds: 2500),
-             from: 400,
+             from: 600,
 
              child: Container(
                padding: const EdgeInsets.all(10.0),
@@ -290,13 +282,6 @@ class _DashboardViewState extends State<DashboardView> {
                ),
              ),
            )
-
-
-
-
-
-
-
             ],
           ),
         ),

@@ -4,7 +4,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:responsive_grid/responsive_grid.dart';
 import 'package:testapp/core/appColor.dart';
 import 'package:testapp/core/sizeUtil.dart';
 import 'package:testapp/views/dashboardView.dart';
@@ -60,9 +59,9 @@ class _HomeViewState extends State<HomeView> {
 
           //Navbar
           Positioned(
-              bottom: 20,
-              left: 37,
-              right: 37,
+              bottom: MySize.size40,
+              left: MySize.size38,
+              right: MySize.size38,
               child:
               SlideInUp(
                   duration: const Duration(milliseconds: 1000),
@@ -82,13 +81,7 @@ class _HomeViewState extends State<HomeView> {
   Widget _navBar(){
     return Container(
       height: 65,
-      width: MySize.screenWidth/1.6,
 
-      margin: const EdgeInsets.only(
-          right: 24,
-          left: 24,
-          bottom: 24
-      ),
       padding:  EdgeInsets.symmetric(horizontal: MySize.size10),
       decoration: BoxDecoration(
           color: AppColor.lightBlack,

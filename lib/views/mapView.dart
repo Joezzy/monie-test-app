@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:responsive_grid/responsive_grid.dart';
 import 'package:testapp/core/appColor.dart';
 import 'package:testapp/core/sizeUtil.dart';
 import 'package:testapp/custom/iconWidget.dart';
@@ -98,7 +97,7 @@ class _MapviewState extends State<Mapview> {
     // initMarkers();
     mainAddress = const CameraPosition(
       target: LatLng(59.93129021307281, 30.36082212343487),
-      zoom: 13.5
+      zoom: 1.5
     );
   }
 
@@ -117,7 +116,7 @@ class _MapviewState extends State<Mapview> {
             zoomControlsEnabled: true,
             zoomGesturesEnabled: true,
             markers: markers,
-            // liteModeEnabled: true,
+            liteModeEnabled: true,
             minMaxZoomPreference: MinMaxZoomPreference.unbounded,
             initialCameraPosition: mainAddress,
             onMapCreated: (GoogleMapController controller) {
@@ -140,6 +139,7 @@ class _MapviewState extends State<Mapview> {
                 children: [
                   ZoomIn(
                     duration: const Duration(milliseconds: 2000),
+                    delay: const Duration(milliseconds: 1000),
                     child: SizedBox(
                       width: MySize.screenWidth/1.4,
                       child: TextField(
@@ -194,6 +194,7 @@ class _MapviewState extends State<Mapview> {
 
                   ZoomIn(
                     duration: const Duration(milliseconds: 2000),
+                    delay: const Duration(milliseconds: 1000),
                     child: filterIconWidget(
                         icon: Icons.adjust,
                         color: Colors.white
@@ -216,6 +217,7 @@ class _MapviewState extends State<Mapview> {
                 children: [
                   ZoomIn(
                     duration: const Duration(milliseconds: 2000),
+                    delay: const Duration(milliseconds: 1000),
                     child: PopupMenuButton(
                       padding:  EdgeInsets.zero,
                       menuPadding: EdgeInsets.zero,
@@ -288,6 +290,8 @@ class _MapviewState extends State<Mapview> {
 
                   ZoomIn(
                     duration: const Duration(milliseconds: 2000),
+                    delay: const Duration(milliseconds: 1000),
+
                     child: iconWidget(
                         icon: Iconsax.direct_right4,
                         iconColor: Colors.white,
@@ -304,7 +308,9 @@ class _MapviewState extends State<Mapview> {
               child:
 
               ZoomIn(
-                duration: const Duration(milliseconds: 2000),                child: Column(
+                duration: const Duration(milliseconds: 2000),
+                delay: const Duration(milliseconds: 1000),
+                child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Container(

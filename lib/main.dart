@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:testapp/views/homeView.dart';
-import 'package:testapp/views/test.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
       ),
       // theme: ThemeData.dark(),
       // home:  const TestPage(),
-      home:  HomeView()
+      home:  const HomeView()
     );
   }
 }
