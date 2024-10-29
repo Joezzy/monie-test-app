@@ -92,12 +92,12 @@ class _MapviewState extends State<Mapview> {
   @override
   void initState() {
     // TODO: implement initState
+    //
     super.initState();
-
     // initMarkers();
     mainAddress = const CameraPosition(
       target: LatLng(59.93129021307281, 30.36082212343487),
-      zoom: 1.5
+      zoom: 13.5
     );
   }
 
@@ -116,7 +116,7 @@ class _MapviewState extends State<Mapview> {
             zoomControlsEnabled: true,
             zoomGesturesEnabled: true,
             markers: markers,
-            liteModeEnabled: true,
+            // liteModeEnabled: true,
             minMaxZoomPreference: MinMaxZoomPreference.unbounded,
             initialCameraPosition: mainAddress,
             onMapCreated: (GoogleMapController controller) {
